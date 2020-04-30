@@ -1,24 +1,5 @@
-/*-----------------| Form Login |-----------------*/
-.LOGIN {
-	color: #000;
-}
+/*-----------------| Old 1 |-----------------*/
 
-.bg {
-	background: url('../image/SWITCH.jpg') no-repeat;
-	width: 100%;
-	height: 100vh;
-}
-
-.form-container {
-	border: 0px solid #fff;
-	padding: 50px 60px;
-	margin-top: 20vh;
-	/*script  sibawah ini memunculkan shadow, cek "https://cssmatic.com/box-shadow" 
-	untuk setting shadow */
-	-webkit-box-shadow: 1px 4px 20px 10px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 1px 4px 20px 10px rgba(0, 0, 0, 0.75);
-	box-shadow: 1px 4px 20px 10px rgba(0, 0, 0, 0.75);
-}
 
 
 
@@ -119,124 +100,6 @@
 	margin-bottom: 15px;
 }
 
-
-div.gallery {
-	margin: 5px;
-	border: 1px solid #ccc;
-	float: left;
-	width: 180px;
-}
-
-div.gallery:hover {
-	border: 1px solid #777;
-}
-
-div.gallery img {
-	margin-top: 10px;
-	width: 160px;
-	height: auto;
-}
-
-div.desc {
-	padding: 10px;
-	text-align: center;
-}
-
-div.harga {
-	padding: 5px;
-	text-align: center;
-	margin-bottom: 10px;
-	font-weight: bold;
-}
-
-.card {
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-	transition: 0.3s;
-}
-
-.hovercard {
-	width: 150px;
-	height: 200px;
-	background: white;
-}
-
-.hovercard>* {
-	color: #fff;
-}
-
-.hovercard,
-.hovercard-overlay {
-	display: -webkit-box;
-	display: flex;
-	position: relative;
-	-webkit-box-align: center;
-	align-items: center;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	flex-direction: column;
-	-webkit-box-pack: center;
-	justify-content: center;
-	width: 100%;
-}
-
-.hovercard-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 250px;
-	background: rgba(255, 255, 255, 0);
-	opacity: 0;
-	-webkit-transition: opacity 250ms;
-	transition: opacity 250ms;
-}
-
-.hovercard:hover .hovercard-overlay {
-	opacity: 1;
-	text-decoration: none;
-}
-
-.hovercard .logo {
-	height: 120px;
-	width: 80%;
-	max-width: 200px;
-}
-
-.hovercard+* {
-	margin-top: 1.5rem;
-}
-
-@media screen and (min-width: 600px) and (max-width: 899px) {
-	.hovercard {
-		height: 200px;
-	}
-}
-
-@media screen and (max-width: 599px) {
-	.hovercard {
-		height: auto;
-	}
-
-	.hovercard-overlay {
-		position: static;
-		height: auto;
-		background: transparent;
-		opacity: 1;
-	}
-}
-
-body {
-	margin: 20vh 0;
-}
-
-.codepen-hovercards {}
-
-.codepen-hovercards {
-	text-align: center;
-}
-
-.codepen-hovercards h2 {
-	margin-bottom: 0;
-}
 
 
 /*--------------- |Carousel| ---------------*/
@@ -459,33 +322,87 @@ body {
 		font-weight: 1000;
 	}
 
-	div.gallery {
-		margin: 5px;
-		border: 1px solid #ccc;
-		float: left;
-		width: 180px;
+	.card {
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+		transition: 0.3s;
 	}
 
-	div.gallery:hover {
-		border: 1px solid #777;
+	/* .hovercard {
+		width: 150px;
+		height: 200px;
+		background: white;
+	} */
+
+	.hovercard>* {
+		color: #fff;
 	}
 
-	div.gallery img {
-		margin-top: 10px;
-		width: 160px;
-		height: auto;
+	.hovercard,
+	.hovercard-overlay {
+		display: -webkit-box;
+		display: flex;
+		position: relative;
+		-webkit-box-align: center;
+		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		justify-content: center;
+		width: 100%;
 	}
 
-	div.desc {
-		padding: 10px;
+	.hovercard-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 250px;
+		background: rgba(255, 255, 255, 0);
+		opacity: 0;
+		-webkit-transition: opacity 250ms;
+		transition: opacity 250ms;
+	}
+
+	.hovercard:hover .hovercard-overlay {
+		opacity: 1;
+		text-decoration: none;
+	}
+
+	.hovercard .logo {
+		height: 120px;
+		width: 80%;
+		max-width: 200px;
+	}
+
+	.hovercard+* {
+		margin-top: 1.5rem;
+	}
+
+	@media screen and (min-width: 600px) and (max-width: 899px) {
+		.hovercard {
+			height: 200px;
+		}
+	}
+
+	@media screen and (max-width: 599px) {
+		.hovercard {
+			height: auto;
+		}
+
+		.hovercard-overlay {
+			position: static;
+			height: auto;
+			background: transparent;
+			opacity: 1;
+		}
+	}
+
+	.codepen-hovercards {
 		text-align: center;
 	}
 
-	div.harga {
-		padding: 5px;
-		text-align: center;
-		margin-bottom: 10px;
-		font-weight: bold;
+	.codepen-hovercards h2 {
+		margin-bottom: 0;
 	}
 
 
