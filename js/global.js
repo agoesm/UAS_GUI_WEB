@@ -50,6 +50,9 @@ $(document).ready(function () {
   });
 });
 
+//Testimonial
+
+
 // Footer panel
 $(document).ready(function () {
   $(window).scroll(function () {
