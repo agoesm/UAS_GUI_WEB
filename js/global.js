@@ -14,28 +14,7 @@ $(document).ready(function () {
   });
 });
 
-// produk panel
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(document).scrollTop() > 200) {
-      $('.kk').addClass('animated jackInTheBox');
-      $('.ck1').addClass('animated rotateInUpLeft');
-      $('.ck2').addClass('animated slideInUp');
-      $('.ck3').addClass('animated rotateInUpRight');
-    }
-  });
-});
-
-// Carousel panel
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(document).scrollTop() > 400) {
-      $('.bd-example').addClass('animated slideInLeft');
-    }
-  });
-});
-
-// pelayanan panel
+// pelayanan panel > 200
 $(document).ready(function () {
   $(window).scroll(function () {
     if ($(document).scrollTop() > 1300) {
@@ -50,27 +29,26 @@ $(document).ready(function () {
   });
 });
 
-// contact panel
+// produk panel > 400
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(document).scrollTop() > 2100) {
-      $('.panel-contact').addClass('animated slideInRight');
+    if ($(document).scrollTop() > 200) {
+      $('.kk').addClass('animated jackInTheBox');
+      $('.ck1').addClass('animated rotateInUpLeft');
+      $('.ck2').addClass('animated slideInUp');
+      $('.ck3').addClass('animated rotateInUpRight');
     }
   });
 });
 
-// review panel
+// Carousel panel > 1300
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(document).scrollTop() > 2700) {
-      $('.pr').addClass('animated tada');
-      $('.r1').addClass('animated bounceInLeft');
-      $('.r2').addClass('animated bounceInUp');
-      $('.r3').addClass('animated bounceInRight');
+    if ($(document).scrollTop() > 400) {
+      $('.bd-example').addClass('animated slideInLeft');
     }
   });
 });
-
 
 // Footer panel
 $(document).ready(function () {
