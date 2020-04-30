@@ -119,6 +119,7 @@
 	margin-bottom: 15px;
 }
 
+
 div.gallery {
 	margin: 5px;
 	border: 1px solid #ccc;
@@ -148,6 +149,92 @@ div.harga {
 	font-weight: bold;
 }
 
+.card {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	transition: 0.3s;
+}
+
+.hovercard {
+	width: 150px;
+	height: 200px;
+	background: white;
+}
+
+.hovercard>* {
+	color: #fff;
+}
+
+.hovercard,
+.hovercard-overlay {
+	display: -webkit-box;
+	display: flex;
+	position: relative;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.hovercard-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 250px;
+	background: rgba(255, 255, 255, 0);
+	opacity: 0;
+	-webkit-transition: opacity 250ms;
+	transition: opacity 250ms;
+}
+
+.hovercard:hover .hovercard-overlay {
+	opacity: 1;
+	text-decoration: none;
+}
+
+.hovercard .logo {
+	height: 120px;
+	width: 80%;
+	max-width: 200px;
+}
+
+.hovercard+* {
+	margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+	.hovercard {
+		height: 200px;
+	}
+}
+
+@media screen and (max-width: 599px) {
+	.hovercard {
+		height: auto;
+	}
+
+	.hovercard-overlay {
+		position: static;
+		height: auto;
+		background: transparent;
+		opacity: 1;
+	}
+}
+
+body {
+	margin: 20vh 0;
+}
+
+.codepen-hovercards {
+	text-align: center;
+}
+
+.codepen-hovercards h2 {
+	margin-bottom: 0;
+}
 
 /* .panel-produk h4 {
 	font-size: 20px;
