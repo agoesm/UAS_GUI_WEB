@@ -121,6 +121,35 @@
 	/* border: 1px solid transparent; */
 	margin-bottom: 15px;
 }
+div.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 180px;
+}
+  
+div.gallery:hover {
+	border: 1px solid #777;
+}
+  
+div.gallery img {
+	margin-top: 10px;
+	width: 160px;
+	height: auto;
+}
+  
+div.desc {
+	padding: 10px;
+	text-align: center;
+}
+
+div.harga {
+	padding: 5px;
+	text-align: center;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
 
 /* .panel-produk h4 {
 	font-size: 20px;
@@ -142,6 +171,7 @@
 
 .bd-example h5 {
 	font-style: italic;
+	color: #000;
 }
 
 
@@ -405,6 +435,34 @@
 	.panel-produk p {
 		font-size: 20px;
 		font-weight: 1000;
+	}
+	div.gallery {
+		margin: 5px;
+		border: 1px solid #ccc;
+		float: left;
+		width: 180px;
+	}
+	  
+	div.gallery:hover {
+		border: 1px solid #777;
+	}
+	  
+	div.gallery img {
+		margin-top: 10px;
+		width: 160px;
+		height: auto;
+	}
+	  
+	div.desc {
+		padding: 10px;
+		text-align: center;
+	}
+	
+	div.harga {
+		padding: 5px;
+		text-align: center;
+		margin-bottom: 10px;
+		font-weight: bold;
 	}
 
 
