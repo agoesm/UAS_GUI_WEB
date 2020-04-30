@@ -228,6 +228,8 @@ body {
 	margin: 20vh 0;
 }
 
+.codepen-hovercards {}
+
 .codepen-hovercards {
 	text-align: center;
 }
@@ -235,18 +237,6 @@ body {
 .codepen-hovercards h2 {
 	margin-bottom: 0;
 }
-
-/* .panel-produk h4 {
-	font-size: 20px;
-	margin-bottom: 15px;
-	color: #007849;
-}
-
-.panel-produk p {
-	font-size: 15px;
-	color: #262228;
-	font-weight: 1000;
-} */
 
 
 /*--------------- |Carousel| ---------------*/
