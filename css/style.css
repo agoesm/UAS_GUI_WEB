@@ -293,7 +293,7 @@
 	/*--------------- |Panel Produk| ---------------*/
 	.panel-produk {
 		margin-top: 130px;
-		height: 550px;
+		height: 1050px;
 	}
 
 	.panel-produk h2 {
@@ -322,11 +322,11 @@
 		transition: 0.3s;
 	}
 
-	/* .hovercard {
+	.hovercard {
 		width: 150px;
 		height: 200px;
 		background: white;
-	} */
+	}
 
 	.hovercard>* {
 		color: #fff;

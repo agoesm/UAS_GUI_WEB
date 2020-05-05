@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tumbasno - Produk</title>
+  <link rel="icon" type="image/png" href="image/icon/SLOGO.jpeg" /> <!-- Menampilkan ikon pada Tab bar -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- My Font -->
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+  <!-- My CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  <!-- My JS -->
+  <script src="js/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  ​<script src="js/axios.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand page-scroll" href="index.html"><img src="image/icon/LOGO.jpeg"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link page-scroll" href="#panel-pelayanan">LAYANAN KAMI</a>
+          <a class="nav-item nav-link page-scroll" href="#panel-produk">PRODUK KAMI</a>
+          <a class="nav-item nav-link page-scroll" href="#panel-contact">TESTIMONIAL</a>
+          <a class="nav-item btn btn-light button" data-toggle="modal" data-target="#exampleModal">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- PRODUK KAMI  -->
+  <div class="panel-produk" id="panel-produk">
+    <div class="container-fluid">
+      <h2 class="kk"><strong>PRODUK KAMI</strong></h2>
+      <div class="row">
+        <div class="col-md-1 offset-2 ck1">
+          <a href=""><img src="image/icon/vegetables.png" class="rounded-circle" alt="vegetables"></a>
+          <p>Sayur</p>
+        </div>
+        <div class="col-md-1 ck2">
+          <a href=""><img src="image/icon/fruit.png" class="rounded-circle" alt="fruit"></a>
+          <p>Buah</p>
+        </div>
+        <div class="col-md-1 ck2">
+          <a href=""><img src="image/icon/meat.png" class="rounded-circle" alt="meat"></a>
+          <p>Daging</p>
+        </div>
+        <div class="col-md-1 ck2">
+          <a href=""><img src="image/icon/seafood.png" class="rounded-circle" alt="seafood"></a>
+          <p>Seafood</p>
+        </div>
+        <div class="col-md-1 ck2">
+          <a href=""><img src="image/icon/food.png" class="rounded-circle" alt="food"></a>
+          <p>Sembako</p>
+        </div>
+        <div class="col-md-1 ck2">
+          <a href=""><img src="image/icon/spices.png" class="rounded-circle" alt="spices"></a>
+          <p>Bumbu</p>
+        </div>
+        <div class="col-md-1 ck2">
+          <a href=""><img src="image/icon/snack.png" class="rounded-circle" alt="snack"></a>
+          <p>Snack</p>
+        </div>
+        <div class="col-md-1 ck3">
+          <a href=""><img src="image/icon/more.png" class="rounded-circle" alt="more"></a>
+          <p>More</p>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="tumbas" id="tumbas">
+        <div class="listproduk">
+          <div class="listprodukcard" v-for="produkku in produk">
+            <div class="thumbnail">
+              <img v-bind:src="produkku.foto" style="width: 100%; height: 150px;">
+              <p>Rp {{produkku.harga}}</p>
+              <h5>{{produkku.nama_produk}}</h5>
+              <button class="btn btn-light button1" v-on:click="addCart(produkku.foto,produkku.harga)"
+                type="button">Beli</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <h4>Keranjang Belanja</h4>
+          <br>
+
+          <table>
+            <tr v-for="nama_produk in keranjangmerek">
+              <td>
+                <img v-bind:src="nama_produk" width="125px" height="100px">
+              </td>
+              <td><button class="btn btn-light button1" v-on:click="removeCart(index)" type="button">X</button></td>
+            </tr>
+          </table>
+          <!-- {{total}} -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h2><strong>Tentang Kami</strong></h2>
+          <p>Kami Hadir sebagai pasar tradisional yang telah merambah ke sistem online, sehingga memudahkan masyarakat
+            dalam berbelanja dipasar tradisional</p>
+        </div>
+        <div class="col-md-2">
+          <h2><strong>Home</strong></h2>
+          <a href="">LAYANAN KAMI</a>
+          <br>
+          <a href="">PRODUK KAMI</a>
+          <br>
+          <a href="">TESTIMONIAL</a>
+        </div>
+        <div class="col-md-4">
+          <h2><strong>Tumbasno</strong></h2>
+          <a href="">Sayur</a>
+          <br>
+          <a href="">Buah</a>
+          <br>
+          <a href="">Daging</a>
+          <br>
+          <a href="">Seafood</a>
+          <br>
+          <a href="">Sembako</a>
+          <br>
+          <a href="">Bumbu Dapur</a>
+          <br>
+          <a href="">Snack</a>
+        </div>
+        <div class="col-md-3">
+          <br>
+          <a class="footer-brand" href="index.php"><img src="image/icon/LOGO.jpeg" alt="logo"></a>
+          <br><br><br>
+          <p>Copyright © 2019 Tumbasno, All Rights Reseverd</p>
+          <p>Find Us on Social Media</p>
+          <a href="#"><img src="image/icon/ig.png" alt="IG" class="sf"></a>
+          <a href="#"><img src="image/icon/fb.png" alt="fb" class="sf"></a>
+          <a href="#"><img src="image/icon/line.png" alt="line" class="sf"></a>
+          <a href="#"><img src="image/icon/wa.png" alt="WA" class="sf"></a>
+          <a href="#"><img src="image/icon/email.png" alt="email" class="sf"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    var vm = new Vue({
+      el: '#tumbas',
+      data: {
+        produk: [],
+        keranjangharga: [],
+        keranjangmerek: [],
+      },
+
+      computed: {
+        total() {
+          return this.keranjangharga.reduce(function (sum, item) {
+            return sum + item
+          }, 0)
+        }
+      },
+
+      methods: {
+        addCart: function (nama_produk, harga) {
+          this.keranjangharga.push(harga);
+          this.keranjangmerek.push(nama_produk);
+        },
+        removeCart: function (index) {
+          this.keranjangmerek.splice(index, 1)
+          this.keranjangharga.splice(index, 1)
+        },
+        upDate: function () {
+          axios.get('http://localhost:8080/GUI/OnlineClass/VueJS_AjaxAxios_MySQL/api.php').then(response => this
+            .produk = response.data['result'])
+        }
+      },
+
+      mounted() {
+        this.upDate();
+        this.timer = setInterval(this.upDate, 1000)
+      }
+    })
+  </script>
+
+</body>
+
+</html>
