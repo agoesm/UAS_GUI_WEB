@@ -1,4 +1,4 @@
-# UAS_GUI_WEB
+# UAS GUI WEB
 Ini repo UAS matkul Implementasi GUI Web
 
 Page index.html
