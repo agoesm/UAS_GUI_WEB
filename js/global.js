@@ -17,14 +17,13 @@ $(document).ready(function () {
 // pelayanan panel > 200
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(document).scrollTop() > 1300) {
+    if ($(document).scrollTop() > 200) {
       $('.pk').addClass('animated rubberBand');
       $('.p1').addClass('animated fadeInLeft');
-      $('.p2').addClass('animated fadeInUp');
-      $('.p3').addClass('animated fadeInRight');
-      $('.p4').addClass('animated fadeInLeft');
-      $('.p5').addClass('animated fadeInUp');
-      $('.p6').addClass('animated fadeInRight');
+      $('.p2').addClass('animated fadeInRight');
+      $('.p3').addClass('animated fadeInLeft');
+      $('.p4').addClass('animated fadeInRight');
+      $('.p5').addClass('animated fadeInLeft');
     }
   });
 });
@@ -32,7 +31,7 @@ $(document).ready(function () {
 // produk panel > 400
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(document).scrollTop() > 200) {
+    if ($(document).scrollTop() > 1100) {
       $('.kk').addClass('animated jackInTheBox');
       $('.ck1').addClass('animated rotateInUpLeft');
       $('.ck2').addClass('animated slideInUp');
@@ -44,7 +43,7 @@ $(document).ready(function () {
 // Carousel panel > 1300
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(document).scrollTop() > 400) {
+    if ($(document).scrollTop() > 1600) {
       $('.bd-example').addClass('animated slideInLeft');
     }
   });
