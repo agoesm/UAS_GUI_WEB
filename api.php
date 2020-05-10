@@ -10,7 +10,8 @@ while($row = mysqli_fetch_array($query)){
     array_push($result, array('id_produk' => $row['id_produk'],
     'nama_produk' => $row['nama_produk'],
     'harga' => $row['harga'],
-    'deskripsi' => $row['deskripsi']
+    'deskripsi' => $row['deskripsi'],
+    'image' => $row['image']
 ));
 }
 echo json_encode(array("result" => $result));
