@@ -37,9 +37,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link page-scroll" href="#panel-pelayanan">LAYANAN KAMI</a>
-          <a class="nav-item nav-link page-scroll" href="#panel-produk">PRODUK KAMI</a>
-          <a class="nav-item nav-link page-scroll" href="#panel-contact">TESTIMONIAL</a>
+          <a class="nav-item nav-link page-scroll" href="index.html#panel-pelayanan">LAYANAN KAMI</a>
+          <a class="nav-item nav-link page-scroll" href="index.html#panel-produk">PRODUK KAMI</a>
+          <a class="nav-item nav-link page-scroll" href="index.html#panel-review">TESTIMONIAL</a>
           <a class="nav-item btn btn-light button" data-toggle="modal" data-target="#exampleModal">Login</a>
         </div>
       </div>
@@ -107,9 +107,14 @@
               <td>
                 <h4>Keranjang Belanja</h4>
               </td>
-              <th><i class="fas fa-shopping-cart" style="width: 45px; height: 45px;"></i></th>
+              <th>
+                <span class="badge badge-danger rounded-circle"
+                  style="position:absolute; margin-left: -15px; margin-top: -15px;">{{ qty }}</span>
+                <i class="fas fa-shopping-cart" style="width: 45px; height: 45px;"></i>
+              </th>
             </tr>
           </table>
+          <!-- Total Harga : Rp {{ total }} -->
           <br>
 
           <table>
@@ -191,8 +196,8 @@
 
       computed: {
         total() {
-          return this.keranjangharga.reduce(function (sum, item) {
-            return sum + item
+          return this.keranjangharga.reduce(function (sum, produk) {
+            return sum + produk
           }, 0)
         }
       },
